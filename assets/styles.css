@@ -1,0 +1,78 @@
+:root {
+    --primary: #59114d;
+    --secondary: #e98a15;
+    /* --tertiary: #df84db; */
+    --light: #ece5f0;
+    --medium: #003b36;
+    --dark: #012622;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    color: var(--light);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 35px;
+    background-color: var(--dark);
+}
+
+.title {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-button {
+    background-color: var(--dark);
+    color: var(--secondary);
+}
+
+main {
+    background-color: var(--medium);
+}
+
+.modal-title {
+    padding: 10px 20px;
+    color: var(--secondary)
+}
+
+.modal-text {
+    padding: 20px;
+}
+
+.modal-button {
+    background: var(--primary);
+    color: var(--light);
+}
+
+/* UTILITY STYLES START */
+.hide {
+    display: none;
+}
+/* UTILITY STYLES END */
+
+/* trash later */
+#modal-container {
+    background-color: var(--medium);
+}
