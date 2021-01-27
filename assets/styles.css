@@ -1,10 +1,11 @@
 :root {
-    --primary: #59114d;
-    --secondary: #e98a15;
-    /* --tertiary: #df84db; */
-    --light: #ece5f0;
-    --medium: #003b36;
-    --dark: #012622;
+    --oldFashioned: #7a211b;
+    --daiquiri: #d0ab4a;
+    --pinaColada: #fffee0;
+    --lounge: #28282f;
+    --decor: #a6806b;
+    --lime: #3b640e;
+    --negroni: #ad0005;
 }
 
 * {
@@ -12,7 +13,7 @@
 }
 
 body {
-    color: var(--light);
+    color: var(--pinaColada);
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -21,11 +22,11 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px 35px;
-    background-color: var(--dark);
+    background-color: var(--decor);
 }
 
 .title {
-    color: var(--secondary);
+    color: var(--lounge);
     font-weight: bold;
     font-size: 36px;
     margin: 0;
@@ -44,17 +45,22 @@ header nav ul {
 }
 
 .nav-button {
-    background-color: var(--dark);
-    color: var(--secondary);
+    background-color: var(--decor);
+    color: var(--lounge);
 }
 
 main {
-    background-color: var(--medium);
+    background-color: var(--lounge);
+}
+
+/* MODAL STYLES START */
+.modal {
+    background-color: var(--oldFashioned);
 }
 
 .modal-title {
     padding: 10px 20px;
-    color: var(--secondary)
+    color: var(--daiquiri)
 }
 
 .modal-text {
@@ -62,17 +68,23 @@ main {
 }
 
 .modal-button {
-    background: var(--primary);
-    color: var(--light);
+    background: var(--lime);
+    color: var(--pinaColada);
 }
+/* MODAL STYLES END */
 
 /* UTILITY STYLES START */
 .hide {
     display: none;
 }
-/* UTILITY STYLES END */
 
-/* trash later */
-#modal-container {
-    background-color: var(--medium);
+.confirm {
+    background-color: var(--lime);
+    color: var(--pinaColada);
 }
+
+.cancel {
+    background-color: var(--negroni);
+    color: var(--pinaColada);
+}
+/* UTILITY STYLES END */
