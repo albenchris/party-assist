@@ -22,22 +22,25 @@ body {
 
 /* HEADER STYLES START */
 header {
+    width: 100%;
     background-color: var(--decor);
 }
 
-header ul {
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.title {
-    color: var(--lounge);
+.pure-menu-heading {
+    text-align: left;
     font-weight: bold;
     font-size: 36px;
     margin: 0;
+    color: var(--lounge);
 }
 
-.nav-button {
+header ul {
+    margin-right: 50px;
+    width: 50%;
+    text-align: right;
+}
+
+.pure-menu-link {
     background-color: var(--decor);
     color: var(--lounge);
 }
@@ -108,6 +111,14 @@ img {
 /* MEDIA QUERIES START */
 @media screen and (max-width: 1000px) {
 
+    .pure-menu-horizontal .pure-menu-list {
+        justify-content: flex-end;
+    }
+
+    .pure-g {
+        justify-content: center;
+    }
+
     #image-container,
     #ingredients-container,
     #intructions-container {
@@ -115,31 +126,36 @@ img {
     }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 680px) {
 
     header {
-        padding-bottom: 0;
-        justify-content: center;
-        position: relative;
+        text-align: center;
     }
 
-    header h1 {
+    .title {
+        text-align: center;
         width: 100%;
+    }
+
+    .pure-menu-horizontal .pure-menu-list {
+        width: 100%;
+        justify-content: center;
+        display: block;
     }
 
     header ul {
-        margin-top: 20px;
-        width: 100%;
-        justify-content: center;
+        text-align: center;
     }
 
-    header ul li button {
+    .pure-menu-link {
+        width: 100%;
+        text-align: center;
         font-size: 20px;
     }
 
     #image-container,
     #ingredients-container,
     #intructions-container {
-        margin: 30px 15% 30px 15%;
+        margin: 30px 20% 30px 20%;
     }
 }
