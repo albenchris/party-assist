@@ -10,19 +10,24 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     color: var(--pinaColada);
     font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
 }
 
+/* HEADER STYLES START */
 header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 20px 35px;
     background-color: var(--decor);
+}
+
+header ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .title {
@@ -32,26 +37,37 @@ header {
     margin: 0;
 }
 
-header nav {
-    margin: 7px 0;
-}
-
-header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
 .nav-button {
     background-color: var(--decor);
     color: var(--lounge);
 }
+/* HEADER STYLES END */
 
+/* MAIN PAGE STYLES START */
 main {
+    margin: 0 auto;
     background-color: var(--lounge);
 }
+
+.pure-g {
+    letter-spacing: normal;
+}
+
+#image-container,
+#ingredients-container,
+#intructions-container {
+    margin: 3% auto;
+    position: relative;
+}
+
+img {
+    background-image: url(./images/old-fashioned.webp);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 2%;
+}
+/* MAIN PAGE STYLES END */
 
 /* MODAL STYLES START */
 .modal {
@@ -88,3 +104,42 @@ main {
     color: var(--pinaColada);
 }
 /* UTILITY STYLES END */
+
+/* MEDIA QUERIES START */
+@media screen and (max-width: 1000px) {
+
+    #image-container,
+    #ingredients-container,
+    #intructions-container {
+        margin: 30px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+    }
+
+    header ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header ul li button {
+        font-size: 20px;
+    }
+
+    #image-container,
+    #ingredients-container,
+    #intructions-container {
+        margin: 30px 15% 30px 15%;
+    }
+}
