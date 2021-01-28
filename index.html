@@ -3,64 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>What 2 Drink</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" />
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css" />
     <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 <body>
     <!-- Header Start -->
-    <header class="hero">
-        <h1 class="title pure-menu-heading">What 2 Drink</h1>
-        <nav>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <button class="pure-button nav-button">What</button>
-                </li>
-                <li class="pure-menu-item">
-                    <button class="pure-button nav-button">How</button>
-                </li>
-                <li class="pure-menu-item">
-                    <button class="pure-button nav-button">Where</button>
-                </li>
-                <li class="pure-menu-item">
-                    <button class="pure-button nav-button">Why</button>
-                </li>
-            </ul>
-        </nav>    
+    <header class="pure-menu pure-menu-horizontal">
+        <h1 class="pure-menu-heading">What 2 Drink</h1>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item">
+                <button class="pure-menu-link pure-button">What</button>
+            </li>
+            <li class="pure-menu-item">
+                <button class="pure-menu-link pure-button">How</button>
+            </li>
+            <li class="pure-menu-item">
+                <button class="pure-menu-link pure-button">Where</button>
+            </li>
+        </ul>   
     </header>
     <!-- Header End -->
 
     <!-- Main Start-->
     <main>
-        
+        <div class="main-content-container pure-g">
+            <!-- Placeholder Content Start -->
+            <div id="image-container" class="pur-u-1-4">
+                <img />
+            </div>
+            <div id="ingredients-container" class="pur-u-1-4">
+                <div>
+                    <h3 class="drink-name">OLD FASHIONED</h3>
+                    <ul class="ingredients-list">
+                        <li>Bourbon or Rye, 2oz</li>
+                        <li>Orange Bitters, 2 dashes</li>
+                        <li>Simple Syrup, 1tsp</li>
+                        <li>Orange Peel</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="intructions-container" class="pur-u-1-4">
+                <h3 class="instructions">Instructions</h3>
+                <ol class="instructions-list">
+                    <li>Pour whiskey, bitters and syrup into stirring glass</li>
+                    <li>Stir with ice until glass frosts on the outside ~ 20sec</li>
+                    <li>Strain into glass with fresh ice</li>
+                    <li>Twist orange peel over drink to express oils, then place into glass</li>
+                </ol>
+            </div>
+            <!-- Placeholder Content End -->
+        </div>
     </main>
     <!-- Main End -->
 
     <!-- Modals Start -->
     <div id="modal-container" class="">
-        <div id="what-modal" class="modal">
+        <div id="what-modal" class="modal hide">
             <h2 class="modal-title">What 2 Drink</h2>
             <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rerum ipsum culpa, sed illum excepturi distinctio eius quia deleniti obcaecati earum voluptas eaque alias ut dolorem similique est, tenetur nam.</p>
-            <button class="pure-button modal-button">Click here...</button>
+            <button class="pure-button modal-button cancel">Cancel</button>
+            <button class="pure-button modal-button confirm">Confirm</button>
         </div>
 
-        <div id="where-modal" class="modal">
+        <div id="where-modal" class="modal hide">
             <h2 class="modal-title">Where 2 Drink</h2>
             <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rerum ipsum culpa, sed illum excepturi distinctio eius quia deleniti obcaecati earum voluptas eaque alias ut dolorem similique est, tenetur nam.</p>
-            <button class="pure-button modal-button">Click here...</button>
+            <button class="pure-button modal-button cancel">Cancel</button>
+            <button class="pure-button modal-button confirm">Confirm</button>
         </div>
 
-        <div id="how-modal" class="modal">
+        <div id="how-modal" class="modal hide">
             <h2 class="modal-title">How 2 Drink</h2>
             <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rerum ipsum culpa, sed illum excepturi distinctio eius quia deleniti obcaecati earum voluptas eaque alias ut dolorem similique est, tenetur nam.</p>
-            <button class="pure-button modal-button">Click here...</button>
-        </div>
-
-        <div id="why-modal" class="modal">
-            <h2 class="modal-title">Why 2 Drink</h2>
-            <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rerum ipsum culpa, sed illum excepturi distinctio eius quia deleniti obcaecati earum voluptas eaque alias ut dolorem similique est, tenetur nam.</p>
-            <button class="pure-button modal-button">Click here...</button>
+            <button class="pure-button modal-button cancel">Cancel</button>
+            <button class="pure-button modal-button confirm">Confirm</button>
         </div>
     </div>
     <!-- Modals End -->
