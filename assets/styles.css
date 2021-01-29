@@ -1,10 +1,12 @@
 :root {
-    --oldFashioned: #7a211b;
-    --daiquiri: #d0ab4a;
-    --pinaColada: #fffee0;
-    --lounge: #28282f;
-    --decor: #a6806b;
-    --lime: #3b640e;
+    --olive: #465e5a;
+    --purple: #59496d;
+    
+    --light: #cbbdb2;
+    --medium: #8c7968;
+    --dark: #202537;
+
+    --teal: #0c9cad;
     --negroni: #ad0005;
 }
 
@@ -15,7 +17,7 @@
 }
 
 body {
-    color: var(--pinaColada);
+    color: var(--light);
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
@@ -23,7 +25,7 @@ body {
 /* HEADER STYLES START */
 header {
     width: 100%;
-    background-color: var(--decor);
+    background-color: var(--medium);
 }
 
 .pure-menu-heading {
@@ -31,7 +33,7 @@ header {
     font-weight: bold;
     font-size: 36px;
     margin: 0;
-    color: var(--lounge);
+    color: var(--dark);
 }
 
 header ul {
@@ -41,15 +43,22 @@ header ul {
 }
 
 .pure-menu-link {
-    background-color: var(--decor);
-    color: var(--lounge);
+    margin-left: 20px;
+    background-color: var(--olive);
+    color: var(--light);
+}
+
+.pure-menu-link:hover {
+    background-color: var(--light);
+    color: var(--olive);
 }
 /* HEADER STYLES END */
 
 /* MAIN PAGE STYLES START */
 main {
     margin: 0 auto;
-    background-color: var(--lounge);
+    height: 100vh;
+    background-color: var(--dark);
 }
 
 .pure-g {
@@ -74,21 +83,46 @@ img {
 
 /* MODAL STYLES START */
 .modal {
-    background-color: var(--oldFashioned);
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 100%;
+    height: 400px;
+    max-height: 100%;
+    overflow: hidden;
+    border: 3px solid var(--light);
+    border-radius: 10px;
+    padding: 15% auto;
+    background-color: var(--purple);
+    float: right;
 }
 
 .modal-title {
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: 10px 20px;
-    color: var(--daiquiri)
+    background-color: var(--olive);
+    color: var(--light);
 }
 
 .modal-text {
+    height: 100%;
     padding: 20px;
 }
 
+.modal-btns {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 .modal-button {
-    background: var(--lime);
-    color: var(--pinaColada);
+    margin: 0 15px 15px 15px;
+    color: var(--light);
 }
 /* MODAL STYLES END */
 
@@ -98,13 +132,13 @@ img {
 }
 
 .confirm {
-    background-color: var(--lime);
-    color: var(--pinaColada);
+    background-color: var(--teal);
+    color: var(--light);
 }
 
 .cancel {
     background-color: var(--negroni);
-    color: var(--pinaColada);
+    color: var(--White);
 }
 /* UTILITY STYLES END */
 
