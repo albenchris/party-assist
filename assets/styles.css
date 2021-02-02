@@ -6,6 +6,7 @@
     --medium: #8c7968;
     --dark: #202537;
 
+    --lime: #6ba734;
     --teal: #0c9cad;
     --negroni: #ad0005;
 }
@@ -122,7 +123,8 @@ img {
 
 .modal-button {
     margin: 0 15px 15px 15px;
-    color: var(--light);
+    background-color: var(--teal);
+    color: var(--dark);
 }
 /* MODAL STYLES END */
 
@@ -132,13 +134,13 @@ img {
 }
 
 .confirm {
-    background-color: var(--teal);
-    color: var(--light);
+    background-color: var(--lime);
+    color: var(--dark);
 }
 
 .cancel {
     background-color: var(--negroni);
-    color: var(--White);
+    color: var(--light);
 }
 /* UTILITY STYLES END */
 

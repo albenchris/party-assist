@@ -70,23 +70,28 @@
         </div>
 
         <div id="cocktail-modal" class="modal hide">
-            <div class="modal-content">
+            <div id="random-cocktail-modal" class="modal-content hide">
                 <h2 class="modal-title">Generate Random Cocktail Recipe</h2>
                 <p class="modal-text">
-                    Afraid of making a decision? 
+                    Up for an adventure? 
                     We got you covered!
                 </br>
-                    By pressing the blue button below, we'll provide you with a random cocktail recipe. 
+                    By pressing the green button below, we'll provide you with a random cocktail recipe. 
                     We promise it'll be delicious!
+                </br>
+                    Otherwise, press the blue button to search for a cocktail by name.
                 </p>
             </div>
-            <div class="modal-btns">
+            
+            <div class="modal-btns hide">
                 <button id="random-cancel" class="pure-button modal-button cancel">Nah, Nevermind</button>
+                <button id="switch-to-search" class="pure-button modal-button">Search By Name</button>
                 <button id="random-confirm" class="pure-button modal-button confirm">Surprise Me!</button>
             </div>
-            <form>
-                <h3 class="modal-title">Or do you have something specific in mind?</h3>
-                <input id="cocktail-by-name" placeholder="Enter cocktail name here..." class="user-input" />
+
+            <form id="cocktail-search-form" class="modal-content">
+                <label class="modal-title">Have something in mind?</label>
+                <input class="" name="cocktail-by-name" id="cocktail-by-name" type="text" placeholder="Enter cocktail name here..." class="user-input" />
                 <button id="cocktail-search-btn" type="submit">🔍</button>
             </form>
         </div>

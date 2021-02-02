@@ -1,15 +1,22 @@
 var cocktailBtn = document.getElementById("cocktail-btn")
 var cocktailModalEl = document.getElementById("cocktail-modal");
 
+var randomCocktailModalEl = document.getElementById("random-cocktail-modal");
+var cocktailSearchModalEl = document.getElementById("cocktail-search-form");
+var cocktailFormEl = document.getElementById("cocktail-search-form");
+var cocktailNameInput = document.getElementById("cocktail-by-name");
+
+
 var mainContainerEl = document.getElementById("main-content-container");
 
 function getSpecificDrink(event) {
+    // console.log(cocktailName);
     event.preventDefault();
     resetState();
     mainContainerEl.innerHTML = "";
-    console.log("button pressed");
 
-    var specificURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+    var specificURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktailNameInput.value.trim();
+    console.log(specificURL);
 
     fetch(specificURL).then(function(response) {
         return response.json().then(function(data) {
@@ -112,16 +119,37 @@ function resetState() {
     cocktailModalEl.classList.add("hide");
 };
 
+// function cocktailModalSwitch() {
+//     randomCocktailModalEl.classList.toggle("hide");
+//     cocktailSearchModalEl.classList.toggle("hide");
+// };
+
+function cocktailSearchFormHandler(event) {
+    event.preventDefault();
+    // randomCocktailModalEl.classList.add("hide");
+    // cocktailSearchModalEl.classList.remove("hide");
+
+    var cocktailName = cocktailNameInput.value.trim();
+    if (cocktailName) {
+        getSpecificDrink(cocktailNameInput);
+        cocktailNameInput.value = "";
+    }
+
+    // var cocktailSearchBtn = document.getElementById("cocktail-search-btn");
+};
+
 function cocktailBtnHandler() {
     cocktailModalEl.classList.remove("hide");
     
     var confirmBtn = document.getElementById("random-confirm");
+    // var modalSwitchBtn = document.getElementById("switch-to-search");
     var cancelBtn = document.getElementById("random-cancel");
-    var cocktailSearchBtn = document.getElementById("cocktail-search-btn");
+
 
     confirmBtn.addEventListener("click", getRandomDrink);
+    // modalSwitchBtn.addEventListener("click", cocktailModalSwitch);
     cancelBtn.addEventListener("click", resetState);
-    cocktailSearchBtn.addEventListener("click", getSpecificDrink);
 };
 
+cocktailFormEl.addEventListener("submit", getSpecificDrink);
 cocktailBtn.addEventListener("click", cocktailBtnHandler);
