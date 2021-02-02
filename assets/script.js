@@ -3,6 +3,23 @@ var cocktailModalEl = document.getElementById("cocktail-modal");
 
 var mainContainerEl = document.getElementById("main-content-container");
 
+function getSpecificDrink(event) {
+    event.preventDefault();
+    resetState();
+    mainContainerEl.innerHTML = "";
+    console.log("button pressed");
+
+    var specificURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+
+    fetch(specificURL).then(function(response) {
+        return response.json().then(function(data) {
+            displayCocktailRecipe(data);
+        })
+    }).catch(function(err) {
+        console.log("Error: ", err);
+    });
+};
+
 function getRandomDrink() {
     resetState();
     mainContainerEl.innerHTML = "";
@@ -11,14 +28,14 @@ function getRandomDrink() {
 
     fetch(randomURL).then(function(response) {
         return response.json().then(function(data) {
-            displayRandomCocktail(data);
+            displayCocktailRecipe(data);
         })
     }).catch(function(err) {
         console.log("Error: ", err);
     });
 };
 
-function displayRandomCocktail(cocktail) {
+function displayCocktailRecipe(cocktail) {
     // image start
     var imgContainerEl = document.createElement("div");
     imgContainerEl.setAttribute("id", "image-container");
@@ -95,14 +112,16 @@ function resetState() {
     cocktailModalEl.classList.add("hide");
 };
 
-function randomBtnHandler() {
+function cocktailBtnHandler() {
     cocktailModalEl.classList.remove("hide");
     
     var confirmBtn = document.getElementById("random-confirm");
     var cancelBtn = document.getElementById("random-cancel");
+    var cocktailSearchBtn = document.getElementById("cocktail-search-btn");
 
     confirmBtn.addEventListener("click", getRandomDrink);
     cancelBtn.addEventListener("click", resetState);
+    cocktailSearchBtn.addEventListener("click", getSpecificDrink);
 };
 
-cocktailBtn.addEventListener("click", randomBtnHandler);
+cocktailBtn.addEventListener("click", cocktailBtnHandler);
