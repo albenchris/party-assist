@@ -6,7 +6,7 @@
     --medium: #8c7968;
     --dark: #202537;
 
-    --lime: #6ba734;
+    /* --lime: #6ba734; */
     --teal: #0c9cad;
     --negroni: #ad0005;
 }
@@ -60,6 +60,7 @@ main {
     margin: 0 auto;
     height: 100vh;
     background-color: var(--dark);
+    overflow: hidden;
 }
 
 .pure-g {
@@ -110,9 +111,14 @@ img {
     color: var(--light);
 }
 
+.secondary-title {
+    margin-top: 30px;
+    border-radius: 0;
+}
+
 .modal-text {
     height: 100%;
-    padding: 20px;
+    padding: 15px;
 }
 
 .modal-btns {
@@ -134,7 +140,7 @@ img {
 }
 
 .confirm {
-    background-color: var(--lime);
+    background-color: var(--teal);
     color: var(--dark);
 }
 

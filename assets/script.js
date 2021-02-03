@@ -46,7 +46,7 @@ function displayCocktailRecipe(cocktail) {
     // image start
     var imgContainerEl = document.createElement("div");
     imgContainerEl.setAttribute("id", "image-container");
-    imgContainerEl.classList.add("pur-u-1-4");
+    imgContainerEl.classList.add("pure-u-4-10");
 
     var image = document.createElement("img");
     image.setAttribute("src", cocktail.drinks[0].strDrinkThumb);
@@ -56,7 +56,7 @@ function displayCocktailRecipe(cocktail) {
     // ingredients start
     var ingredContainerEl = document.createElement("div");
     ingredContainerEl.setAttribute("id", "ingredients-container");
-    ingredContainerEl.classList.add("pur-u-1-4");
+    ingredContainerEl.classList.add("pure-u-1-10");
 
     var drinkName = document.createElement("h2");
     drinkName.classList.add("drink-name");
@@ -90,7 +90,7 @@ function displayCocktailRecipe(cocktail) {
     // instructions start
     var instrContainerEl = document.createElement("div");
     instrContainerEl.setAttribute("id", "instructions-container");
-    instrContainerEl.classList.add("pur-u-1-4");
+    instrContainerEl.classList.add("pure-u-5-10");
 
     var instrSectionName = document.createElement("h3");
     instrSectionName.innerHTML = "Instructions";
@@ -119,10 +119,10 @@ function resetState() {
     cocktailModalEl.classList.add("hide");
 };
 
-// function cocktailModalSwitch() {
-//     randomCocktailModalEl.classList.toggle("hide");
-//     cocktailSearchModalEl.classList.toggle("hide");
-// };
+function cocktailModalSwitch() {
+    randomCocktailModalEl.classList.toggle("hide");
+    cocktailSearchModalEl.classList.toggle("hide");
+};
 
 function cocktailSearchFormHandler(event) {
     event.preventDefault();
@@ -132,10 +132,7 @@ function cocktailSearchFormHandler(event) {
     var cocktailName = cocktailNameInput.value.trim();
     if (cocktailName) {
         getSpecificDrink(cocktailNameInput);
-        cocktailNameInput.value = "";
     }
-
-    // var cocktailSearchBtn = document.getElementById("cocktail-search-btn");
 };
 
 function cocktailBtnHandler() {
