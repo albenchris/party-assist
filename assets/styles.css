@@ -92,6 +92,54 @@ img {
 }
 /* MODAL STYLES END */
 
+/* spotify api */
+
+.container{
+    display:flex
+
+}
+
+.row{
+    flex-direction: row;
+
+}
+
+.form-label{
+    color: #28282f;
+
+}
+
+.form-group{
+    justify-content: space-between;
+    width: fit-content;
+
+}
+
+.form-control{
+    color: #28282f;
+
+}
+    
+.btn{
+
+}
+
+.song-list{
+
+}
+
+.song-detail{
+
+}
+
+.list-group.item{
+    
+}
+
+.details{
+    justify-content: right;
+}
+
 /* UTILITY STYLES START */
 .hide {
     display: none;
