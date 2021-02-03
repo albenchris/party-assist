@@ -24,6 +24,11 @@ function getSpecificDrink(event) {
         })
     }).catch(function(err) {
         console.log("Error: ", err);
+        mainContainerEl.innerHTML = "<h2 class='cocktail-search-error'>Sorry, we couldn't find that one." +
+            "</br>Try searching for another cocktail or, if you're feeling adventurous, press the " +
+            "<button id='surprise-confirm' class='pure-button modal-button confirm'>Surprise Me!</button>" +
+            " button.</h2>";
+        cocktailSearchErrorHandler();
     });
 };
 
@@ -126,8 +131,6 @@ function cocktailModalSwitch() {
 
 function cocktailSearchFormHandler(event) {
     event.preventDefault();
-    // randomCocktailModalEl.classList.add("hide");
-    // cocktailSearchModalEl.classList.remove("hide");
 
     var cocktailName = cocktailNameInput.value.trim();
     if (cocktailName) {
@@ -139,13 +142,15 @@ function cocktailBtnHandler() {
     cocktailModalEl.classList.remove("hide");
     
     var confirmBtn = document.getElementById("random-confirm");
-    // var modalSwitchBtn = document.getElementById("switch-to-search");
-    var cancelBtn = document.getElementById("random-cancel");
-
+    var cancelBtn = document.getElementById("random-cancel");    
 
     confirmBtn.addEventListener("click", getRandomDrink);
-    // modalSwitchBtn.addEventListener("click", cocktailModalSwitch);
     cancelBtn.addEventListener("click", resetState);
+};
+
+function cocktailSearchErrorHandler() {
+    var surpriseMeBtn = document.getElementById("surprise-confirm");
+    surpriseMeBtn.addEventListener("click", getRandomDrink);
 };
 
 cocktailFormEl.addEventListener("submit", getSpecificDrink);

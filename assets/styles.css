@@ -81,6 +81,12 @@ img {
     height: 250px;
     border-radius: 2%;
 }
+
+.cocktail-search-error {
+    text-align: center;
+    margin: 100px 10%;
+    line-height: 2;
+}
 /* MAIN PAGE STYLES END */
 
 /* MODAL STYLES START */
