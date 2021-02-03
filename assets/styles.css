@@ -6,7 +6,7 @@
     --medium: #8c7968;
     --dark: #202537;
 
-    /* --lime: #6ba734; */
+    --lime: #6ba734;
     --teal: #0c9cad;
     --negroni: #ad0005;
 }
@@ -15,11 +15,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Righteous', cursive; /* from Google Fonts */
 }
 
 body {
     color: var(--light);
-    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
 
