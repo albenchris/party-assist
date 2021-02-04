@@ -67,6 +67,7 @@ main {
     letter-spacing: normal;
 }
 
+#spotify-widget,
 #image-container,
 #ingredients-container,
 #instructions-container {
@@ -138,7 +139,61 @@ img {
     background-color: var(--teal);
     color: var(--dark);
 }
+
+#playlist-name {
+    display: block;
+    width: 100%;
+}
 /* MODAL STYLES END */
+
+/* Spotify API STYLES START */
+.container{
+    display:grid;
+    grid-template-columns: 30% 40%;    
+    width: 100%;
+    background-color: var(--medium);
+    margin:auto;
+    justify-content: center;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.music-header{
+    margin:auto;
+    font-size: 35px;
+    color: var(--dark);
+}   
+    
+.form-label{
+    color: var(--dark);
+    font-size: large;
+    font-weight: bold;
+}
+
+.form-control{
+    color: var(--dark);
+}
+    
+.btn{
+    background-color: var(--lime);
+    padding:10px 15px;
+    color: var(--dark);
+    padding: 10px;
+}
+
+.song-list a{
+    margin: 10px 5px 10px 5px;
+    border: solid 3px var(--lime);
+    display:inline-flex;
+    color:  var(--light);   
+}
+
+.song-detail{
+    display: block;
+}
+/* Spotify API STYLES END */
 
 /* UTILITY STYLES START */
 .hide {
