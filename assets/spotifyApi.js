@@ -1,3 +1,5 @@
+//token: BQAxg0ZymA1ROIgINnW4Olo7-s_QqD7jkvuIU1tn3qEfKDhZ7hmoZLbL0QV30fCpeS8v-UxKIDOD_ERRfBLE8GDLC8j9xbDqbr4S6zO50UXGeD7OVf-j0RbsYeKjqjefc-LhsdjpXbFdewbXciH7fD4aWOV2JAfPh3U"
+
 var APIController = (function() {
     
   var clientId = '77a5b61ddbb6429186452d0699051ac4';
@@ -140,7 +142,7 @@ var UIController = (function() {
 
           var html = 
           `
-          <div class="row details">
+          <div class=" details">
               <img src="${img}" alt="">        
           </div>
           <div class="row  ">

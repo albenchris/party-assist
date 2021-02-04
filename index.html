@@ -22,7 +22,8 @@
             <li class="pure-menu-item">
                 <button class="pure-menu-link pure-button">Where</button>
             </li>
-        </ul>   
+        </ul> 
+       
     </header>
     <!-- Header End -->
 
@@ -59,8 +60,25 @@
     <!-- Main End -->
 
     <!-- music start-->
-    <div class="container">        
+    
+    
+    <div class="container ">
+        <div>
+            <form action="">
+            <h1 class="music-header">Selected Playlist</h1>
+            <label for="Playlist" class="form-label">Playlist:</label>
+            <select name="" id="playlist" class="form-control">
+                <option>Select...</option>
+            </select>
+            <button type="submit" id="btn-playlist" class="btn " onclick="playMusic" >Play Music</button>
+
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYE5MI4mMuii" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>        
+    
+        </form>
+        </div>
+        <div>
         <form action="">
+            <h1 class="music-header">Top 10 Songs</h1>
             <input type="hidden" id='hidden_token'>
             <div class=" form-group row  ">
                 <label for="Genre" class="form-label ">Genre:</label>
@@ -86,14 +104,15 @@
             </div>
             <div class="song-detail" id="song-detail">                
             </div>
-        </div>   
+        </div> 
+        </div>  
     </div
     <!-- Modals End -->
     
                                                
     <script src="./assets/script.js"></script>
     <script src="./assets/spotifyApi.js"></script>
-
+    
    
 </body>
 </html>

@@ -95,25 +95,35 @@ img {
 /* spotify api */
 
 .container{
-    display:flex
+    display:grid;
+    grid-template-columns: 30% 40%;
+    
+    width: 100%;
+    background-color: #a6806b;
+    margin:auto;
+    justify-content: center;
 
 }
+
 
 .row{
     flex-direction: row;
 
 }
-
-.form-label{
+.music-header{
+    margin:auto;
+    font-size: 35px;
     color: #28282f;
+}   
+    
+.form-label{
+    color: #fffee0;
+    font-size: large;
+    font-weight: bold;
 
 }
 
-.form-group{
-    justify-content: space-between;
-    width: fit-content;
 
-}
 
 .form-control{
     color: #28282f;
@@ -121,24 +131,27 @@ img {
 }
     
 .btn{
-
+    background-color: #3b640e;
+    padding:10px 15px;
+    color: #28282f;
+    padding: 10px;
 }
 
-.song-list{
+
+.song-list a{
+    margin: 10px 5px 10px 5px;
+    border: solid 3px #3b640e;
+    display:inline-flex;
+    color:  #fffee0;
    
 }
 
 .song-detail{
+    display: block;
    
 }
 
-.list-group.item{
-    
-}
 
-.details{
-    
-}
 
 /* UTILITY STYLES START */
 .hide {
