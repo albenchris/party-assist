@@ -47,10 +47,14 @@ header ul {
     background-color: var(--olive);
     color: var(--light);
 }
-
+ 
 .pure-menu-link:hover {
     background-color: var(--light);
     color: var(--olive);
+}
+a{
+    text-decoration: none;
+    color: var(--light);
 }
 /* HEADER STYLES END */
 
@@ -192,4 +196,51 @@ img {
     #instructions-container {
         margin: 30px 20% 30px 20%;
     }
+}
+
+/*Start of Tivia*/
+h1{
+    padding: 0 auto;
+    margin: 0 auto;
+    
+}
+#trivia-start-button{
+    background-color: var(--medium);
+    padding: auto;
+    margin: 50px 40%;
+    width: 350px;
+    height: 75px;
+    font-size: 26px;
+    overflow: hidden;
+}
+
+#trivia-start-button:hover{
+    background-color: var(--purple);
+}
+
+#trivia-content{
+    background-color: var(--dark);
+    height: auto;
+    margin: auto;
+    padding: auto;
+    
+}
+#trivia-content h3{
+    font-weight: bold;
+}
+#trivia-content h4{
+    font-weight: bold;
+    margin: 10px 10px;
+}
+#trivia-content ul{
+    margin-bottom: 10px;
+    border-bottom: var(--dark) solid;
+}
+#trivia-content ul button{
+    padding: 10px;
+    margin-right: 3px;
+    background-color: var(--medium);
+    color: var(--dark);
+    font-weight: 400;
+   
 }
