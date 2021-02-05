@@ -6,6 +6,7 @@
     --medium: #8c7968;
     --dark: #202537;
 
+    --lime: #6ba734;
     --teal: #0c9cad;
     --negroni: #ad0005;
 }
@@ -14,11 +15,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Righteous', cursive; /* from Google Fonts */
 }
 
 body {
     color: var(--light);
-    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
 
@@ -59,12 +60,14 @@ main {
     margin: 0 auto;
     height: 100vh;
     background-color: var(--dark);
+    overflow: hidden;
 }
 
 .pure-g {
     letter-spacing: normal;
 }
 
+#spotify-widget,
 #image-container,
 #ingredients-container,
 #instructions-container {
@@ -78,6 +81,12 @@ img {
     width: 250px;
     height: 250px;
     border-radius: 2%;
+}
+
+.cocktail-search-error {
+    text-align: center;
+    margin: 100px 10%;
+    line-height: 2;
 }
 /* MAIN PAGE STYLES END */
 
@@ -109,9 +118,14 @@ img {
     color: var(--light);
 }
 
+.secondary-title {
+    margin-top: 30px;
+    border-radius: 0;
+}
+
 .modal-text {
     height: 100%;
-    padding: 20px;
+    padding: 15px;
 }
 
 .modal-btns {
@@ -122,9 +136,64 @@ img {
 
 .modal-button {
     margin: 0 15px 15px 15px;
-    color: var(--light);
+    background-color: var(--teal);
+    color: var(--dark);
+}
+
+#playlist-name {
+    display: block;
+    width: 100%;
 }
 /* MODAL STYLES END */
+
+/* Spotify API STYLES START */
+.container{
+    display:grid;
+    grid-template-columns: 30% 40%;    
+    width: 100%;
+    background-color: var(--medium);
+    margin:auto;
+    justify-content: center;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.music-header{
+    margin:auto;
+    font-size: 35px;
+    color: var(--dark);
+}   
+    
+.form-label{
+    color: var(--dark);
+    font-size: large;
+    font-weight: bold;
+}
+
+.form-control{
+    color: var(--dark);
+}
+    
+.btn{
+    background-color: var(--lime);
+    padding:10px 15px;
+    color: var(--dark);
+    padding: 10px;
+}
+
+.song-list a{
+    margin: 10px 5px 10px 5px;
+    border: solid 3px var(--lime);
+    display:inline-flex;
+    color:  var(--light);   
+}
+
+.song-detail{
+    display: block;
+}
+/* Spotify API STYLES END */
 
 /* UTILITY STYLES START */
 .hide {
@@ -133,12 +202,12 @@ img {
 
 .confirm {
     background-color: var(--teal);
-    color: var(--light);
+    color: var(--dark);
 }
 
 .cancel {
     background-color: var(--negroni);
-    color: var(--White);
+    color: var(--light);
 }
 /* UTILITY STYLES END */
 
