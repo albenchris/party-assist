@@ -211,6 +211,59 @@ img {
 }
 /* UTILITY STYLES END */
 
+/*Start of Tivia*/
+h1{
+    padding: 0 auto;
+    margin: 0 auto;
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--light);
+}
+#trivia-start-button{
+    background-color: var(--medium);
+    padding: auto;
+    margin: 50px 40%;
+    width: 350px;
+    height: 75px;
+    font-size: 26px;
+    overflow: hidden;
+}
+
+#trivia-start-button:hover{
+    background-color: var(--purple);
+}
+
+#trivia-content{
+    background-color: var(--dark);
+    height: auto;
+    margin: auto;
+    padding: auto;
+    
+}
+#trivia-content h3{
+    font-weight: bold;
+}
+#trivia-content h4{
+    font-weight: bold;
+    margin: 10px 10px;
+}
+#trivia-content ul{
+    margin-bottom: 10px;
+    border-bottom: var(--dark) solid;
+}
+#trivia-content ul button{
+    padding: 10px;
+    margin-right: 3px;
+    background-color: var(--medium);
+    color: var(--dark);
+    font-weight: 400;
+   
+}
+/* end of trivia */
+
 /* MEDIA QUERIES START */
 @media screen and (max-width: 1000px) {
 
