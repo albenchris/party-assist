@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css" />
 </head>
+
 <body>
     <!-- Header Start -->
     <header class="pure-menu pure-menu-horizontal">
@@ -22,9 +24,9 @@
                 <button id="cocktail-btn" class="pure-menu-link pure-button">Cocktails</button>
             </li>          
             <li class="pure-menu-item">
-                <button class="pure-menu-link pure-button">Trivia</button>
+                <button id="trivia-btn" class="pure-menu-link pure-button"><a href="trivia.html">Trivia</a></button>
             </li>
-        </ul>   
+        </ul>
     </header>
     <!-- Header End -->
 
@@ -137,9 +139,8 @@
                 <p class="modal-text">
                     Up for an adventure? 
                     We got you covered!
-                </br>
-                    By pressing the blue button below, we'll provide you with a random cocktail recipe. 
-                    We promise it'll be delicious!
+                    By pressing the blue button below, we'll provide you with a random cocktail recipe.
+                    We promise it'll be delicious.
                 </p>
             </div>
 
@@ -149,12 +150,18 @@
             </div>
         </div>
 
-        <div id="trivia-modal" class="modal hide">
-            <h2 class="modal-title"></h2>
-            <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rerum ipsum culpa, sed illum excepturi distinctio eius quia deleniti obcaecati earum voluptas eaque alias ut dolorem similique est, tenetur nam.</p>
+        <div id="where-modal" class="modal hide">
+            <h2 class="modal-title">Where 2 Drink</h2>
+            <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rerum ipsum culpa,
+                sed illum excepturi distinctio eius quia deleniti obcaecati earum voluptas eaque alias ut dolorem
+                similique est, tenetur nam.</p>
             <button class="pure-button modal-button cancel">Cancel</button>
             <button class="pure-button modal-button confirm">Confirm</button>
         </div>
+
+        
+        
+        
     </div>
     <!-- Modals End -->
 
