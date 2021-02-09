@@ -212,6 +212,7 @@ img {
 }
 
 .cancel {
+    float: right;
     background-color: var(--negroni);
     color: var(--light);
 }
