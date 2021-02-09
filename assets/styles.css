@@ -140,57 +140,63 @@ img {
     color: var(--dark);
 }
 
-#playlist-name {
+.playlist-btn {
     display: block;
-    width: 100%;
+    width: 70%;
+    margin: 1% auto;
+    border: 3px solid var(--olive);
+    border-radius: 10px;
+    padding: 1px;
+    background-color: var(--light);
+    color: var(--dark);
 }
 /* MODAL STYLES END */
 
 /* Spotify API STYLES START */
-.container{
-    display:grid;
+.container {
+    display: grid;
     grid-template-columns: 30% 40%;    
     width: 100%;
     background-color: var(--medium);
-    margin:auto;
+    margin: auto;
     justify-content: center;
 }
 
-.row{
+.row {
     flex-direction: row;
 }
 
-.music-header{
-    margin:auto;
+.music-header {
+    margin: auto;
     font-size: 35px;
     color: var(--dark);
 }   
     
-.form-label{
+.form-label {
     color: var(--dark);
     font-size: large;
     font-weight: bold;
 }
 
-.form-control{
+.form-control {
     color: var(--dark);
 }
     
-.btn{
+.btn {
     background-color: var(--lime);
-    padding:10px 15px;
+    padding: 10px 15px;
     color: var(--dark);
     padding: 10px;
 }
 
-.song-list a{
+.song-list a {
     margin: 10px 5px 10px 5px;
     border: solid 3px var(--lime);
-    display:inline-flex;
-    color:  var(--light);   
+    display: inline-flex;
+    color: var(--light);   
 }
 
-.song-detail{
+.song-detail {
     display: block;
 }
 /* Spotify API STYLES END */
@@ -212,7 +218,7 @@ img {
 /* UTILITY STYLES END */
 
 /*Start of Tivia*/
-h1{
+h1 {
     padding: 0 auto;
     margin: 0 auto;
     
@@ -222,7 +228,7 @@ a {
     text-decoration: none;
     color: var(--light);
 }
-#trivia-start-button{
+#trivia-start-button {
     background-color: var(--medium);
     padding: auto;
     margin: 50px 40%;
@@ -232,29 +238,29 @@ a {
     overflow: hidden;
 }
 
-#trivia-start-button:hover{
+#trivia-start-button:hover {
     background-color: var(--purple);
 }
 
-#trivia-content{
+#trivia-content {
     background-color: var(--dark);
     height: auto;
     margin: auto;
     padding: auto;
     
 }
-#trivia-content h3{
+#trivia-content h3 {
     font-weight: bold;
 }
-#trivia-content h4{
+#trivia-content h4 {
     font-weight: bold;
     margin: 10px 10px;
 }
-#trivia-content ul{
+#trivia-content ul {
     margin-bottom: 10px;
     border-bottom: var(--dark) solid;
 }
-#trivia-content ul button{
+#trivia-content ul button {
     padding: 10px;
     margin-right: 3px;
     background-color: var(--medium);
