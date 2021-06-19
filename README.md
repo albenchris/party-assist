@@ -38,6 +38,7 @@ James Krikelas:
 - JavaScript
 - HTML5
 - CSS3
+- [Pure CSS](https://purecss.io/)
 - [Spotify API](https://developer.spotify.com/documentation/web-api/)
 - [CocktailDB](https://www.thecocktaildb.com/api.php)
 - [Open Trivia DB](https://opentdb.com/)
