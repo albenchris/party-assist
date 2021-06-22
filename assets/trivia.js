@@ -23,36 +23,69 @@ function getTrivia() {
 function displayTrivia(triviaArr) {
     // console.log(triviaArr[0]);
 
-    triviaArr.map(eachQuestion => {
+    triviaArr.map(eachItem => {
         const difficulty = document.createElement('h4');
-        difficulty.innerHTML = `Difficulty: ${eachQuestion.difficulty}`;
+        difficulty.innerHTML = `Difficulty: ${eachItem.difficulty}`;
         const category = document.createElement('h4');
-        category.innerHTML = `Category: ${eachQuestion.category}`;
+        category.innerHTML = `Category: ${eachItem.category}`;
 
-        const questionObj = {
-            question: eachQuestion.question,
-            answers: [
-                {
-                    answer: eachQuestion.correct_answer,
-                    correctAnswer: true
-                },
-                {
-                    answer: eachQuestion.incorrect_answers[0],
-                    correctAnswer: false
-                },
-                {
-                    answer: eachQuestion.incorrect_answers[1],
-                    correctAnswer: false
-                },
-                {
-                    answer: eachQuestion.incorrect_answers[2],
-                    correctAnswer: false
-                }
-            ]
-        };
-        // console.log(questionObj);
+        // const questionObj = {
+        //     question: eachItem.question,
+        //     answers: [
+        //         {
+        //             answer: eachItem.correct_answer,
+        //             correctAnswer: true
+        //         },
+        //         {
+        //             answer: eachItem.incorrect_answers[0],
+        //             correctAnswer: false
+        //         },
+        //         {
+        //             answer: eachItem.incorrect_answers[1],
+        //             correctAnswer: false
+        //         },
+        //         {
+        //             answer: eachItem.incorrect_answers[2],
+        //             correctAnswer: false
+        //         }
+        //     ]
+        // };
 
+        const answersArr = [
+            {
+                text: eachItem.correct_answer,
+                isCorrect: true
+            },
+            {
+                text: eachItem.incorrect_answers[0],
+                isCorrect: false
+            },
+            {
+                text: eachItem.incorrect_answers[1],
+                isCorrect: false
+            },
+            {
+                text: eachItem.incorrect_answers[2],
+                isCorrect: false
+            }
+        ];
+        answersArr.sort(() => Math.random() - .5);
+        console.log(answersArr);
 
+        const question = document.createElement('h3');
+        question.innerHTML = eachItem.question;
+
+        const answerContainerEl = document.createElement('ul');
+        answersArr.map(answerItem => {
+            const answerEl = document.createElement('button');
+            answerEl.innerHTML = answerItem.text;
+            answerContainerEl.appendChild(answerEl);
+        });
+
+        triviaContentEl.appendChild(category);
+        triviaContentEl.appendChild(difficulty);
+        triviaContentEl.appendChild(question);
+        triviaContentEl.appendChild(answerContainerEl);
     });
 };
 
@@ -60,13 +93,6 @@ function displayTrivia(triviaArr) {
 //     console.log(trivia);
 
 //     for (var q = 0; q < trivia.results.length; q++) {
-//         var difficulty = document.createElement("h4");
-//         difficulty.innerHTML = "Difficulty: " + trivia.results[q].difficulty;
-//         var category = document.createElement("h4");
-//         category.innerHTML = "Category: " + trivia.results[q].category;
-
-//         var question = document.createElement("h3");
-//         question.innerHTML = trivia.results[q].question;
 
 //         var answerContainerEl = document.createElement("ul");
 //         for (var ia = 0; ia < trivia.results[q].incorrect_answers.length; ia++) {
