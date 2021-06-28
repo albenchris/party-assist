@@ -45,7 +45,7 @@ function getTrivia() {
         })
         .then(function () {
             if (triviaQuestions.length) {
-                return playTrivia(triviaQuestions);
+                return playTrivia();
             }
             else return;
         })
@@ -54,52 +54,73 @@ function getTrivia() {
         });
 };
 
-function playTrivia(triviaArr) {
-    // console.log(triviaArr);
-    // console.log(triviaArr[0]);
+function playTrivia() {
 
-    // triviaArr.map(item => {
-    //     // console.log(item.question);
-    //     showQuestion(item);
-    // });
 
     showNextQuestion();
 };
 
 function showNextQuestion() {
-    console.log(triviaQuestions);
+    // console.log(triviaQuestions);
 
-    showQuestion(triviaQuestions[0]);
     if (triviaQuestions.length) {
+        showQuestion(triviaQuestions[0]);
+
         triviaQuestions.shift();
     }
+    // else {
+    //     endTrivia();
+    // }
+
     // console.log(triviaQuestions);
 };
 
 function showQuestion(triviaObj) {
-    console.log(triviaObj);
-        const difficulty = document.createElement('h4');
-        difficulty.innerHTML = `Difficulty: ${triviaObj.difficulty}`;
+    // console.log(triviaObj);
+
+    const difficulty = document.createElement('h3');
+    // difficulty.classList.add('');
+    difficulty.innerHTML = `Difficulty: ${triviaObj.difficulty}`;
+
+    const category = document.createElement('h3');
+    // category.classList.add('');
+    category.innerHTML = `Category: ${triviaObj.category}`;
+
+    const question = document.createElement('h2');
+    // question.classList.add('');
+    question.innerHTML = triviaObj.question;
+
+    const answerContainerEl = document.createElement('ul');
+    // answerContainerEl.classList.add('');
+    triviaObj.answers.sort(() => Math.random() - .5);
+    triviaObj.answers.map(answer => {
+        const answerButtonEl = document.createElement('button');
+        // answerButtonEl.classList.add('');
+        answerButtonEl.innerHTML = answer.text;
+        if (answer.isCorrect) answerButtonEl.dataset.isCorrect = answer.isCorrect        
+        answerButtonEl.addEventListener('click', answerChoice);
         
-        const category = document.createElement('h4');
-        category.innerHTML = `Category: ${triviaObj.category}`;
+        answerContainerEl.appendChild(answerButtonEl);
+    });
 
-        const question = document.createElement('h3');
-        question.innerHTML = triviaObj.question;
+    triviaContentEl.appendChild(category);
+    triviaContentEl.appendChild(difficulty);
+    triviaContentEl.appendChild(question);
+    triviaContentEl.appendChild(answerContainerEl);
+};
 
-        const answerContainerEl = document.createElement('ul');
-        triviaObj.answers.sort(() => Math.random() - .5);
-        triviaObj.answers.map(answerItem => {
-            const answerEl = document.createElement('button');
-            answerEl.innerHTML = answerItem.text;
-            answerContainerEl.appendChild(answerEl);
-        });
+function answerChoice(e) {
+    const selectedAnswer = e.target;
+    if (selectedAnswer.dataset.isCorrect) correctAnswer();
+    if (!selectedAnswer.dataset.isCorrect) wrongAnswer();
+};
 
-        triviaContentEl.appendChild(category);
-        triviaContentEl.appendChild(difficulty);
-        triviaContentEl.appendChild(question);
-        triviaContentEl.appendChild(answerContainerEl);
+function correctAnswer() {
+    console.log('Correct!');
+};
 
+function wrongAnswer() {
+    console.log('Incorrect...');
 };
 
 triviaStartButton.addEventListener("click", getTrivia);
