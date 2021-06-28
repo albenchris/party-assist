@@ -56,7 +56,7 @@ function getTrivia() {
 
 function playTrivia() {
 
-
+    triviaStartButton.classList.add('hide');
     showNextQuestion();
 };
 
@@ -99,7 +99,7 @@ function showQuestion(triviaObj) {
         answerButtonEl.innerHTML = answer.text;
         if (answer.isCorrect) answerButtonEl.dataset.isCorrect = answer.isCorrect        
         answerButtonEl.addEventListener('click', answerChoice);
-        
+
         answerContainerEl.appendChild(answerButtonEl);
     });
 
