@@ -265,6 +265,14 @@ a {
     font-weight: 400;
    
 }
+
+#trivia-content .correct-answer {
+    background-color: var(--lime);
+}
+
+#trivia-content .wrong-answer {
+    background-color: var(--negroni);
+}
 /* end of trivia */
 
 /* UTILITY STYLES START */

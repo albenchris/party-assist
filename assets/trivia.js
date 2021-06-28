@@ -1,5 +1,7 @@
-var triviaStartButton = document.getElementById("trivia-start-button");
-var triviaContentEl = document.getElementById("trivia-content");
+const triviaStartButton = document.getElementById("trivia-start-button");
+const triviaContentEl = document.getElementById("trivia-content");
+const correctAnswerText = document.getElementById('correct-answer-text');
+const wrongAnswerText = document.getElementById('wrong-answer-text');
 
 let triviaQuestions = [];
 
@@ -111,16 +113,24 @@ function showQuestion(triviaObj) {
 
 function answerChoice(e) {
     const selectedAnswer = e.target;
-    if (selectedAnswer.dataset.isCorrect) correctAnswer();
-    if (!selectedAnswer.dataset.isCorrect) wrongAnswer();
+    if (selectedAnswer.dataset.isCorrect) correctAnswer(selectedAnswer);
+    if (!selectedAnswer.dataset.isCorrect) wrongAnswer(selectedAnswer);
 };
 
-function correctAnswer() {
+function correctAnswer(element) {
     console.log('Correct!');
+    element.classList.add('correct-answer');
+
+    wrongAnswerText.classList.add('hide');
+    correctAnswerText.classList.remove('hide');
 };
 
-function wrongAnswer() {
+function wrongAnswer(element) {
     console.log('Incorrect...');
+    element.classList.add('wrong-answer');
+
+    correctAnswerText.classList.add('hide');
+    wrongAnswerText.classList.remove('hide');
 };
 
 triviaStartButton.addEventListener("click", getTrivia);
