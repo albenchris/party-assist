@@ -215,24 +215,6 @@ img {
 }
 /* Spotify API STYLES END */
 
-/* UTILITY STYLES START */
-.hide {
-    display: none;
-}
-
-.cancel {
-    float: right;
-    background-color: var(--negroni);
-    color: var(--light);
-}
-
-.confirm {
-    float: right;
-    background-color: var(--teal);
-    color: var(--dark);
-}
-/* UTILITY STYLES END */
-
 /*Start of Tivia*/
 h1 {
     padding: 0 auto;
@@ -283,7 +265,33 @@ a {
     font-weight: 400;
    
 }
+
+#trivia-content .correct-answer {
+    background-color: var(--lime);
+}
+
+#trivia-content .wrong-answer {
+    background-color: var(--negroni);
+}
 /* end of trivia */
+
+/* UTILITY STYLES START */
+.hide {
+    display: none;
+}
+
+.cancel {
+    float: right;
+    background-color: var(--negroni);
+    color: var(--light);
+}
+
+.confirm {
+    float: right;
+    background-color: var(--teal);
+    color: var(--dark);
+}
+/* UTILITY STYLES END */
 
 /* MEDIA QUERIES START */
 @media screen and (max-width: 1000px) {
