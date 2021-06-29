@@ -24,7 +24,7 @@
                 <button id="cocktail-btn" class="pure-menu-link pure-button">Cocktails</button>
             </li>          
             <li class="pure-menu-item">
-                <button id="trivia-btn" class="pure-menu-link pure-button"><a href="trivia.html">Trivia</a></button>
+                <button id="trivia-btn" class="pure-menu-link pure-button">Trivia</button>
             </li>
         </ul>
     </header>
@@ -150,12 +150,27 @@
                 <button id="random-confirm" class="pure-button modal-button confirm">Surprise Me!</button>
                 <button id="random-cancel" class="pure-button modal-button cancel">Nah, Nevermind</button>
             </div>
-        </div>    
+        </div>
+        
+        <div id="trivia-modal" class="modal hide">
+            <h1 class="modal-title">Trivia</h1>
+            <div id="trivia-container">
+                <h2 id="trivia-header" class="hide">Thanks for playing!</h2>
+                <button id="trivia-start-button">Play Trivia!</button>
+                
+                <div id="trivia-content"></div>
+        
+                <div id="correct-answer-text" class="hide">Correct!</div>
+                <div id="wrong-answer-text" class="hide">Incorrect!</div>
+            </div>
+            <button id='close-trivia-btn' class="pure-button modal-button cancel">Close</button>
+        </div>
     </div>
     <!-- Modals End -->
 
     <script src="./assets/js/spotifyApi.js"></script>
     <script src="./assets/js/player.js"></script>
     <script src="./assets/js/cocktails.js"></script>
+    <script src="./assets/js/trivia.js"></script>
 </body>
 </html>
