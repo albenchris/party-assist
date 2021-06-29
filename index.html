@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/spotify.css" />
+    <link rel="stylesheet" href="./assets/css/cocktails.css" />
+    <link rel="stylesheet" href="./assets/css/trivia.css" />
 </head>
 
 <body>
@@ -32,11 +35,6 @@
 
     <!-- Main Start-->
     <main>
-        <div class="pure-u-5-24">
-            <iframe id="spotify-widget" class="l-box"
-                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYE5MI4mMuii" width="300" height="380"
-                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
         <!-- Placeholder Content Start -->
         <div class="pure-u-18-24">
             <div class="l-box">
@@ -159,7 +157,7 @@
 
             <div class="modal-btns">
                 <button id="random-confirm" class="pure-button modal-button confirm">Surprise Me!</button>
-                <button id="random-cancel" class="pure-button modal-button cancel">Nah, Nevermind</button>
+                <button id="random-cancel" class="pure-button modal-button cancel">Close</button>
             </div>
         </div>
 
@@ -181,6 +179,17 @@
         </div>
     </div>
     <!-- Modals End -->
+
+    <footer>
+            <iframe
+                id="spotify-widget"
+                class="l-box"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYE5MI4mMuii"
+                frameborder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+            ></iframe>
+    </footer>
 
     <script src="./assets/js/spotifyApi.js"></script>
     <script src="./assets/js/player.js"></script>

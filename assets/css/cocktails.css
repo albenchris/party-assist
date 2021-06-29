@@ -1,0 +1,34 @@
+.cocktail-name {
+    border: 3px solid var(--medium);
+    border-radius: 10px;
+    background-color: var(--olive);
+    color: var(--light);
+    margin: 3px;
+    padding: 3px;
+}
+
+img {
+    background-image: url(../images/old-fashioned.webp);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 2%;
+}
+
+#image-container,
+#ingredients-container,
+#instructions-container {
+    margin: 3% auto;
+    position: relative;
+}
+
+.cocktail-search-error {
+    text-align: center;
+    margin: 100px 10%;
+    line-height: 2;
+}
+
+#cocktail-search-history {
+    display: flex;
+    justify-content: space-around;
+}
