@@ -281,6 +281,22 @@ a {
 #trivia-container .wrong-answer {
     background-color: var(--negroni);
 }
+
+#trivia-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.question-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /* end of trivia */
 
 /* UTILITY STYLES START */

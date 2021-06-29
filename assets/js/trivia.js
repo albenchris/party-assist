@@ -93,14 +93,19 @@ function showNextQuestion() {
 };
 
 function showQuestion(triviaObj) {
+    // =============== QUESTION INFO =======================================================
     const difficulty = document.createElement('h3');
-    // difficulty.classList.add('');
     difficulty.innerHTML = `Difficulty: ${triviaObj.difficulty}`;
 
     const category = document.createElement('h3');
-    // category.classList.add('');
     category.innerHTML = `Category: ${triviaObj.category}`;
 
+    const questionInfo = document.createElement('div');
+    questionInfo.classList.add('question-info');
+    questionInfo.appendChild(category);
+    questionInfo.appendChild(difficulty);
+
+    // ================= QUESTION WITH ANSWER BUTTONS =======================================
     const question = document.createElement('h2');
     // question.classList.add('');
     question.innerHTML = triviaObj.question;
@@ -118,8 +123,8 @@ function showQuestion(triviaObj) {
         answerContainerEl.appendChild(answerButtonEl);
     });
 
-    triviaContentEl.appendChild(category);
-    triviaContentEl.appendChild(difficulty);
+    // ============== APPEND TO DOM =========================================================
+    triviaContentEl.appendChild(questionInfo);
     triviaContentEl.appendChild(question);
     triviaContentEl.appendChild(answerContainerEl);
 };
