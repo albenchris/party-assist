@@ -165,15 +165,15 @@
 
         <div id="trivia-modal" class="modal hide">
             <h1 class="modal-title">Trivia</h1>
-            <div id="trivia-container">
-                <h2 id="trivia-header" class="hide">Thanks for playing!</h2>
-                <button id="trivia-start-button">Play Trivia!</button>
+            <div id="trivia-container" class="position-relative">
+                <h2 id="trivia-header" class="hide position-absolute">Thanks for playing!</h2>
+                <button id="trivia-start-button" class="position-absolute">Play Trivia!</button>
 
                 <div id="trivia-content"></div>
             </div>
 
-            <div id="correct-answer-text" class="hide">Correct!</div>
-            <div id="wrong-answer-text" class="hide">Incorrect!</div>
+            <h3 id="correct-answer-text" class="hide answer-feedback">Correct!</h3>
+            <h3 id="wrong-answer-text" class="hide answer-feedback">Incorrect!</h3>
 
             <div class="modal-btns">
                 <button id='close-trivia-btn' class="pure-button modal-button cancel">Close</button>

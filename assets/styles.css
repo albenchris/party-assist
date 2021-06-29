@@ -240,10 +240,13 @@ a {
     align-items: center;
 }
 
+#trivia-header {
+    top: 25%;
+}
+
 #trivia-start-button {
     background-color: var(--medium);
     padding: auto;
-    /* margin: 50px 40%; */
     width: 350px;
     height: 75px;
     font-size: 26px;
@@ -297,12 +300,20 @@ a {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.answer-feedback {
+    margin: 0 70px;
+}
 /* end of trivia */
 
 /* UTILITY STYLES START */
 .hide {
     display: none;
 }
+
+.position-relative {position: relative;}
+
+.position-absolute {position: absolute;}
 
 .cancel {
     float: right;
