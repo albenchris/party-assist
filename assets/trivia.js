@@ -1,3 +1,4 @@
+const triviaHeaderEl = document.getElementById('trivia-header');
 const triviaStartButton = document.getElementById("trivia-start-button");
 const triviaContentEl = document.getElementById("trivia-content");
 const correctAnswerText = document.getElementById('correct-answer-text');
@@ -57,8 +58,11 @@ function getTrivia() {
 };
 
 function playTrivia() {
-
+    triviaHeaderEl.classList.add('hide');
     triviaStartButton.classList.add('hide');
+    // const triviaRestartButton = document.getElementById('trivia-start-button');
+    // triviaRestartButton.classList.add('hide');
+
     showNextQuestion();
 };
 
@@ -142,7 +146,16 @@ function resetState() {
 };
 
 function endTrivia() {
-    console.log("Thanks for playing!")
+    console.log("Thanks for playing!");
+
+    triviaHeaderEl.classList.remove('hide');
+
+    triviaStartButton.textContent = 'Play Again!';
+    triviaStartButton.classList.remove('hide');
+
+
+    // const triviaContainerEl = document.getElementById('trivia-container');
+    // triviaContainerEl.appendChild();
 };
 
 triviaStartButton.addEventListener("click", getTrivia);
