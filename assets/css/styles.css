@@ -31,6 +31,7 @@ a {
 body {
     color: var(--light);
     line-height: 1.5;
+    position: relative;
 }
 
 /* HEADER STYLES START */

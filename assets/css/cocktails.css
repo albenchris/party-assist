@@ -7,13 +7,21 @@
     padding: 3px;
 }
 
-img {
+.cocktail-image {
     background-image: url(../images/old-fashioned.webp);
     background-size: cover;
     width: 250px;
     height: 250px;
     border-radius: 2%;
 }
+
+/* img {
+    background-image: url(../images/old-fashioned.webp);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 2%;
+} */
 
 #image-container,
 #ingredients-container,
