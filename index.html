@@ -22,7 +22,7 @@
             </li>
             <li class="pure-menu-item">
                 <button id="cocktail-btn" class="pure-menu-link pure-button">Cocktails</button>
-            </li>          
+            </li>
             <li class="pure-menu-item">
                 <button id="trivia-btn" class="pure-menu-link pure-button">Trivia</button>
             </li>
@@ -33,7 +33,9 @@
     <!-- Main Start-->
     <main>
         <div class="pure-u-5-24">
-            <iframe id="spotify-widget" class="l-box" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYE5MI4mMuii" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>        
+            <iframe id="spotify-widget" class="l-box"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYE5MI4mMuii" width="300" height="380"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
         <!-- Placeholder Content Start -->
         <div class="pure-u-18-24">
@@ -67,7 +69,7 @@
                 </div>
             </div>
         </div>
-            <!-- Placeholder Content End -->
+        <!-- Placeholder Content End -->
     </main>
     <!-- Main End -->
 
@@ -111,15 +113,23 @@
         <div id="music-modal" class="modal hide">
             <h2 class="modal-title">Choose a Playlist</h2>
             <div id="playlist-button-container">
-                <button class="playlist-btn pure-button" id="R&Rparty" value="37i9dQZF1DWYE5MI4mMuii">Rock & Roll Party</button>
-                <button class="playlist-btn pure-button" id="LoFiBeats" value="0vvXsWCC9xrXsKd4FyS8kM">LoFi Hip Hop Beats</button>
-                <button class="playlist-btn pure-button" id="Jazz2020" value="37i9dQZF1DWTtzPKJEaTC4">Best Jazz Songs of 2020</button>
-                <button class="playlist-btn pure-button" id="Motown" value="5pAp9Q7ayzYXb74FWZBXTv">Motown Greatest Hits!</button>
+                <button class="playlist-btn pure-button" id="R&Rparty" value="37i9dQZF1DWYE5MI4mMuii">Rock & Roll
+                    Party</button>
+                <button class="playlist-btn pure-button" id="LoFiBeats" value="0vvXsWCC9xrXsKd4FyS8kM">LoFi Hip Hop
+                    Beats</button>
+                <button class="playlist-btn pure-button" id="Jazz2020" value="37i9dQZF1DWTtzPKJEaTC4">Best Jazz Songs of
+                    2020</button>
+                <button class="playlist-btn pure-button" id="Motown" value="5pAp9Q7ayzYXb74FWZBXTv">Motown Greatest
+                    Hits!</button>
                 <button class="playlist-btn pure-button" id="Nu-Funk" value="37i9dQZF1DWZgauS5j6pMv">Nu-Funk</button>
-                <button class="playlist-btn pure-button" id="Party-Hits" value="37i9dQZF1DXa2PvUpywmrr">Party Hits</button>
-                <button class="playlist-btn pure-button" id="Brass-Bands" value="2HossUqdAoIhh2GTlrKI8n">Brass Bands</button>
-                <button class="playlist-btn pure-button" id="90sHipHop" value="37i9dQZF1DX186v583rmzp">I Love My '90s Hip-Hop</button>
-                <button class="playlist-btn pure-button" id="AllOut80s" value="37i9dQZF1DX4UtSsGT1Sbe">All Out 80s</button>
+                <button class="playlist-btn pure-button" id="Party-Hits" value="37i9dQZF1DXa2PvUpywmrr">Party
+                    Hits</button>
+                <button class="playlist-btn pure-button" id="Brass-Bands" value="2HossUqdAoIhh2GTlrKI8n">Brass
+                    Bands</button>
+                <button class="playlist-btn pure-button" id="90sHipHop" value="37i9dQZF1DX186v583rmzp">I Love My '90s
+                    Hip-Hop</button>
+                <button class="playlist-btn pure-button" id="AllOut80s" value="37i9dQZF1DX4UtSsGT1Sbe">All Out
+                    80s</button>
             </div>
             <button id="music-cancel" class="pure-button modal-button cancel">Cancel</button>
         </div>
@@ -129,7 +139,8 @@
             <form id="cocktail-search-form" class="pure-form modal-content">
                 <fieldset class="pure-g">
                     <label class="modal-text pure-u-4-10">Have something in mind?</label>
-                    <input id="cocktail-by-name" class="pure-u-5-10" name="cocktail-by-name" type="text" placeholder="Enter cocktail name here..." class="user-input" />
+                    <input id="cocktail-by-name" class="pure-u-5-10" name="cocktail-by-name" type="text"
+                        placeholder="Enter cocktail name here..." class="user-input" />
                     <button id="cocktail-search-btn" class="pure-button pure-u-1-10" type="submit">🔍</button>
                 </fieldset>
                 <div class="modal-text">Recent cocktails:</div>
@@ -139,7 +150,7 @@
             <div id="random-cocktail-modal" class="modal-content">
                 <h3 class="modal-title secondary-title">Feeling Adventurous?</h3>
                 <p class="modal-text">
-                    Up for an adventure? 
+                    Up for an adventure?
                     We got you covered!
                     By pressing the blue button below, we'll provide you with a random cocktail recipe.
                     We promise it'll be delicious.
@@ -151,19 +162,22 @@
                 <button id="random-cancel" class="pure-button modal-button cancel">Nah, Nevermind</button>
             </div>
         </div>
-        
+
         <div id="trivia-modal" class="modal hide">
             <h1 class="modal-title">Trivia</h1>
             <div id="trivia-container">
                 <h2 id="trivia-header" class="hide">Thanks for playing!</h2>
                 <button id="trivia-start-button">Play Trivia!</button>
-                
+
                 <div id="trivia-content"></div>
-        
-                <div id="correct-answer-text" class="hide">Correct!</div>
-                <div id="wrong-answer-text" class="hide">Incorrect!</div>
             </div>
-            <button id='close-trivia-btn' class="pure-button modal-button cancel">Close</button>
+
+            <div id="correct-answer-text" class="hide">Correct!</div>
+            <div id="wrong-answer-text" class="hide">Incorrect!</div>
+
+            <div class="modal-btns">
+                <button id='close-trivia-btn' class="pure-button modal-button cancel">Close</button>
+            </div>
         </div>
     </div>
     <!-- Modals End -->
@@ -173,4 +187,5 @@
     <script src="./assets/js/cocktails.js"></script>
     <script src="./assets/js/trivia.js"></script>
 </body>
+
 </html>
