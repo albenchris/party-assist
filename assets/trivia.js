@@ -64,15 +64,15 @@ function playTrivia() {
 
 function showNextQuestion() {
     // console.log(triviaQuestions);
+    resetState();
 
     if (triviaQuestions.length) {
         showQuestion(triviaQuestions[0]);
 
         triviaQuestions.shift();
+    } else {
+        endTrivia();
     }
-    // else {
-    //     endTrivia();
-    // }
 
     // console.log(triviaQuestions);
 };
@@ -118,19 +118,31 @@ function answerChoice(e) {
 };
 
 function correctAnswer(element) {
-    console.log('Correct!');
     element.classList.add('correct-answer');
 
     wrongAnswerText.classList.add('hide');
     correctAnswerText.classList.remove('hide');
+
+    setTimeout(function() {
+        showNextQuestion();
+    }, 3000);
+
 };
 
 function wrongAnswer(element) {
-    console.log('Incorrect...');
     element.classList.add('wrong-answer');
+    wrongAnswerText.classList.remove('hide');   
+};
+
+function resetState() {
+    while (triviaContentEl.firstChild) triviaContentEl.removeChild(triviaContentEl.firstChild);
 
     correctAnswerText.classList.add('hide');
-    wrongAnswerText.classList.remove('hide');
+    wrongAnswerText.classList.add('hide');
+};
+
+function endTrivia() {
+    console.log("Thanks for playing!")
 };
 
 triviaStartButton.addEventListener("click", getTrivia);
