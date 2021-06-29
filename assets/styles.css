@@ -254,12 +254,6 @@ a {
     background-color: var(--purple);
 }
 
-/* #trivia-container {
-    background-color: var(--dark);
-    height: auto;
-    margin: auto;
-    padding: auto;
-} */
 #trivia-container h3 {
     font-weight: bold;
 }

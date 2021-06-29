@@ -5,7 +5,7 @@ const triviaModalEl = document.getElementById('trivia-modal');
 const triviaContainerEl = document.getElementById('trivia-container')
 const triviaHeaderEl = document.getElementById('trivia-header');
 const triviaStartButton = document.getElementById("trivia-start-button");
-// const triviaContainerEl = document.getElementById("trivia-content");
+const triviaContentEl = document.getElementById("trivia-content");
 const correctAnswerText = document.getElementById('correct-answer-text');
 const wrongAnswerText = document.getElementById('wrong-answer-text');
 
@@ -118,10 +118,10 @@ function showQuestion(triviaObj) {
         answerContainerEl.appendChild(answerButtonEl);
     });
 
-    triviaContainerEl.appendChild(category);
-    triviaContainerEl.appendChild(difficulty);
-    triviaContainerEl.appendChild(question);
-    triviaContainerEl.appendChild(answerContainerEl);
+    triviaContentEl.appendChild(category);
+    triviaContentEl.appendChild(difficulty);
+    triviaContentEl.appendChild(question);
+    triviaContentEl.appendChild(answerContainerEl);
 };
 
 function answerChoice(e) {
@@ -147,7 +147,7 @@ function wrongAnswer(element) {
 };
 
 function resetState() {
-    while (triviaContainerEl.firstChild) triviaContainerEl.removeChild(triviaContainerEl.firstChild);
+    while (triviaContentEl.firstChild) triviaContentEl.removeChild(triviaContentEl.firstChild);
 
     correctAnswerText.classList.add('hide');
     wrongAnswerText.classList.add('hide');
