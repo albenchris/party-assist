@@ -5,6 +5,7 @@
     align-items: center;
 }
 
+/* FORM STYLES START */
 #cocktail-search-form {
     margin: 30px 0 50px 0;
     padding: 0 10px;
@@ -42,6 +43,14 @@
     margin: 0;
     width: 50px;
 }
+/* FORM STYLES END */
+
+/* SEARCH HISTORY STYLES START */
+.cocktail-search-history-container {
+    width: 100%;
+    height: auto;
+}
+/* SEARCH HISTORY STYLES END */
 
 .cocktail-name {
     border: 3px solid var(--medium);

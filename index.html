@@ -129,22 +129,15 @@
             <form id="cocktail-search-form" class="modal-content">
                 <label for="cocktail-by-name" class="modal-text">Have something in mind?</label>
                 <div class="cocktail-name-input">
-                    <input 
-                        id="cocktail-by-name" 
-                        name="cocktail-by-name" 
-                        type="text"
-                        placeholder="Enter cocktail name here..." 
-                        class="user-input" 
-                    />
+                    <input id="cocktail-by-name" name="cocktail-by-name" type="text"
+                        placeholder="Enter cocktail name here..." class="user-input" />
                     <button id="cocktail-search-btn" type="submit">🔍</button>
                 </div>
             </form>
 
-            <div>
-                <div class="modal-text">
-                    Recent cocktails:
-                    <div id="cocktail-search-history"></div>
-                </div>
+            <div class="modal-text cocktail-search-history-container">
+                Recent cocktails:
+                <div id="cocktail-search-history"></div>
             </div>
 
             <div id="random-cocktail-modal" class="modal-content">

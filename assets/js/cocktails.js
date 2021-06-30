@@ -129,9 +129,15 @@ function closeCocktailModal() {
 
 function saveCocktailName(data) {
     var cocktailName = data.drinks[0].strDrink;
+
+    for (let i=0; i<recentCocktailsArr.length; i++) {
+        if (cocktailName === recentCocktailsArr[i]) return;
+    }
+
     recentCocktailsArr.push(cocktailName);
-    recentCocktailsArr.reverse((a,b) => a - b);
-    recentCocktailsArr.splice(9);
+    recentCocktailsArr.shift();
+    // recentCocktailsArr.sort((a,b) => a - b);
+    recentCocktailsArr.splice(5);
 
     localStorage.setItem("recentCocktailsArr", JSON.stringify(recentCocktailsArr));
 
@@ -141,7 +147,7 @@ function saveCocktailName(data) {
 function createCocktailBtn() {
     searchHistoryEl.innerHTML = "";
 
-    for (var i=0; i<recentCocktailsArr.length; i++) {
+    for (let i = 0; i < recentCocktailsArr.length; i++) {
         var cocktailNameButton = document.createElement("button");
         cocktailNameButton.setAttribute("cocktail", recentCocktailsArr[i]);
         cocktailNameButton.setAttribute("class", "cocktail-name pure-button modal-button");
@@ -193,10 +199,13 @@ function cocktailModalHandler() {
 };
 
 function cocktailSearchErrorHandler() {
+    closeCocktailModal();
     mainContainerEl.innerHTML = 
         "<h2 class='cocktail-search-error'>Sorry, we couldn't find that one." +
-        "</br>Try searching for another cocktail or, if you're feeling adventurous, press the " +
-        "<button id='surprise-confirm' class='pure-button modal-button confirm'>Surprise Me!</button>" +
+        "</br>Try searching for another cocktail," + 
+        "</br>or if you're feeling adventurous," + 
+        "</br>press the " +
+        "<button id='surprise-confirm' class='confirm'>Surprise Me!</button>" +
         " button.</h2>";
 
     var surpriseMeBtn = document.getElementById("surprise-confirm");
