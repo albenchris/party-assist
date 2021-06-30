@@ -145,6 +145,7 @@ footer {
 .secondary-title {
     margin-top: 30px;
     border-radius: 0;
+    background-color: var(--purple);
 }
 
 .modal-text {
