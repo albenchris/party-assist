@@ -1,0 +1,21 @@
+/* UTILITY STYLES START */
+.hide {
+    display: none;
+}
+
+.position-relative {position: relative;}
+
+.position-absolute {position: absolute;}
+
+.cancel {
+    float: right;
+    background-color: var(--negroni);
+    color: var(--light);
+}
+
+.confirm {
+    float: right;
+    background-color: var(--teal);
+    color: var(--dark);
+}
+/* UTILITY STYLES END */

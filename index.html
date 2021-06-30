@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/spotify.css" />
     <link rel="stylesheet" href="./assets/css/cocktails.css" />
     <link rel="stylesheet" href="./assets/css/trivia.css" />
+    <link rel="stylesheet" href="./assets/css/utilities.css" />
 </head>
 
 <body>
@@ -118,35 +119,41 @@
                 <button class="playlist-btn pure-button" id="AllOut80s" value="37i9dQZF1DX4UtSsGT1Sbe">All Out
                     80s</button>
             </div>
-            <button id="music-cancel" class="pure-button modal-button cancel">Close</button>
+            <div class="modal-btns">
+                <button id="music-cancel" class="modal-button cancel">Close</button>
+            </div>
         </div>
 
-        <div id="cocktail-modal" class="modal hide">
+        <div id="cocktail-modal" class="modal cocktail-modal hide">
             <h2 class="modal-title">Generate Cocktail Recipe</h2>
-            <form id="cocktail-search-form" class="pure-form modal-content">
-                <fieldset class="pure-g">
-                    <label class="modal-text pure-u-4-10">Have something in mind?</label>
-                    <input id="cocktail-by-name" class="pure-u-5-10" name="cocktail-by-name" type="text"
-                        placeholder="Enter cocktail name here..." class="user-input" />
-                    <button id="cocktail-search-btn" class="pure-button pure-u-1-10" type="submit">🔍</button>
-                </fieldset>
-                <div class="modal-text">Recent cocktails:</div>
-                <div id="cocktail-search-history"></div>
+            <form id="cocktail-search-form" class="modal-content">
+                <label for="cocktail-by-name" class="modal-text">Have something in mind?</label>
+                <div class="cocktail-name-input">
+                    <input 
+                        id="cocktail-by-name" 
+                        name="cocktail-by-name" 
+                        type="text"
+                        placeholder="Enter cocktail name here..." 
+                        class="user-input" 
+                    />
+                    <button id="cocktail-search-btn" type="submit">🔍</button>
+                </div>
             </form>
+
+            <div>
+                <div class="modal-text">
+                    Recent cocktails:
+                    <div id="cocktail-search-history"></div>
+                </div>
+            </div>
 
             <div id="random-cocktail-modal" class="modal-content">
                 <h3 class="modal-title secondary-title">Feeling Adventurous?</h3>
-                <p class="modal-text">
-                    Up for an adventure?
-                    We got you covered!
-                    By pressing the blue button below, we'll provide you with a random cocktail recipe.
-                    We promise it'll be delicious.
-                </p>
+                <button id="random-confirm" class="confirm">Surprise Me!</button>
             </div>
 
             <div class="modal-btns">
-                <button id="random-confirm" class="pure-button modal-button confirm">Surprise Me!</button>
-                <button id="random-cancel" class="pure-button modal-button cancel">Close</button>
+                <button id="random-cancel" class="modal-button cancel">Close</button>
             </div>
         </div>
 
@@ -163,7 +170,7 @@
             <h3 id="wrong-answer-text" class="hide answer-feedback">Incorrect!</h3>
 
             <div class="modal-btns">
-                <button id='close-trivia-btn' class="pure-button modal-button cancel">Close</button>
+                <button id='close-trivia-btn' class="modal-button cancel">Close</button>
             </div>
         </div>
     </div>

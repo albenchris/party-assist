@@ -133,6 +133,7 @@ footer {
 }
 
 .modal-title {
+    width: 100%;
     text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -164,27 +165,6 @@ footer {
 }
 /* MODAL STYLES END */
 
-/* UTILITY STYLES START */
-.hide {
-    display: none;
-}
-
-.position-relative {position: relative;}
-
-.position-absolute {position: absolute;}
-
-.cancel {
-    float: right;
-    background-color: var(--negroni);
-    color: var(--light);
-}
-
-.confirm {
-    float: right;
-    background-color: var(--teal);
-    color: var(--dark);
-}
-/* UTILITY STYLES END */
 
 /* MEDIA QUERIES START */
 @media screen and (max-width: 680px) {
