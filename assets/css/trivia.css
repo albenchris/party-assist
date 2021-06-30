@@ -1,0 +1,82 @@
+/*Start of Tivia*/
+#trivia-modal {
+    background-color: var(--dark);
+}
+
+#trivia-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#trivia-header {
+    top: 25%;
+}
+
+#trivia-start-button {
+    background-color: var(--medium);
+    padding: auto;
+    width: 350px;
+    height: 75px;
+    font-size: 26px;
+    overflow: hidden;
+}
+
+#trivia-start-button:hover {
+    background-color: var(--purple);
+}
+
+#trivia-container h3 {
+    font-weight: bold;
+}
+
+#trivia-container h4 {
+    font-weight: bold;
+    margin: 10px 10px;
+}
+
+#trivia-container ul {
+    margin-bottom: 10px;
+    border-bottom: var(--dark) solid;
+}
+
+#trivia-container ul button {
+    padding: 10px;
+    margin-right: 3px;
+    background-color: var(--medium);
+    color: var(--dark);
+    font-weight: 400;
+   
+}
+
+#trivia-container .correct-answer {
+    background-color: var(--lime);
+}
+
+#trivia-container .wrong-answer {
+    background-color: var(--negroni);
+}
+
+#trivia-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.question-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.answer-feedback {
+    margin: 0 70px;
+}
+/* end of trivia */

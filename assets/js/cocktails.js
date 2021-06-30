@@ -50,6 +50,7 @@ function displayCocktailRecipe(cocktail) {
     imgContainerEl.classList.add("pure-u-4-10");
 
     var image = document.createElement("img");
+    image.classList.add('cocktail-image');
     image.setAttribute("src", cocktail.drinks[0].strDrinkThumb);
     imgContainerEl.appendChild(image);
     // image end
