@@ -42,27 +42,33 @@ function getRandomDrink() {
 };
 
 function displayCocktailRecipe(cocktail) {
+    // console.log(cocktail);
     closeCocktailModal();
     mainContainerEl.innerHTML = "";
+
     // image start
     var imgContainerEl = document.createElement("div");
     imgContainerEl.setAttribute("id", "image-container");
-    imgContainerEl.classList.add("pure-u-4-10");
+
+    var drinkName = document.createElement("h2");
+    drinkName.classList.add("drink-name");
+    drinkName.innerHTML = cocktail.drinks[0].strDrink.toUpperCase();
 
     var image = document.createElement("img");
     image.classList.add('cocktail-image');
     image.setAttribute("src", cocktail.drinks[0].strDrinkThumb);
+
+    imgContainerEl.appendChild(drinkName);
     imgContainerEl.appendChild(image);
     // image end
 
     // ingredients start
     var ingredContainerEl = document.createElement("div");
     ingredContainerEl.setAttribute("id", "ingredients-container");
-    ingredContainerEl.classList.add("pure-u-1-10");
 
-    var drinkName = document.createElement("h2");
-    drinkName.classList.add("drink-name");
-    drinkName.innerHTML = cocktail.drinks[0].strDrink.toUpperCase();
+    var ingredientHeader = document.createElement('h3');
+    ingredientHeader.classList.add('ingredients');
+    ingredientHeader.innerText = 'Ingredients';
 
     var ingredientsList = document.createElement("ul");
     ingredientsList.classList.add("ingredients-list");
@@ -85,17 +91,17 @@ function displayCocktailRecipe(cocktail) {
         ingredientsList.appendChild(ingredient);
     }
 
-    ingredContainerEl.appendChild(drinkName);
+    ingredContainerEl.appendChild(ingredientHeader);
     ingredContainerEl.appendChild(ingredientsList);
     // ingredients end
 
     // instructions start
     var instrContainerEl = document.createElement("div");
     instrContainerEl.setAttribute("id", "instructions-container");
-    instrContainerEl.classList.add("pure-u-5-10");
 
-    var instrSectionName = document.createElement("h3");
-    instrSectionName.innerHTML = "Instructions";
+    var instrHeader = document.createElement("h3");
+    instrHeader.classList.add('instructions');
+    instrHeader.innerHTML = "Instructions";
 
     var instrList = document.createElement("ol");
     instrList.classList.add("instructions-list");
@@ -108,7 +114,7 @@ function displayCocktailRecipe(cocktail) {
         instrList.appendChild(instruction);
     }
 
-    instrContainerEl.appendChild(instrSectionName);
+    instrContainerEl.appendChild(instrHeader);
     instrContainerEl.appendChild(instrList);
     // instructions end
 
