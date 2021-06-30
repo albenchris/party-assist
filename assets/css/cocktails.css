@@ -50,3 +50,9 @@
         max-width: 520px;
     }
 }
+
+@media screen and (max-width: 640px) {
+    #instructions-container {
+        width: 25%;
+    }
+}
