@@ -1,3 +1,57 @@
+.cocktail-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* FORM STYLES START */
+#cocktail-search-form {
+    margin: 30px 0 50px 0;
+    padding: 0 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+#cocktail-search-form label {
+    padding: 0;
+    height: auto;
+}
+
+#cocktail-search-form div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#cocktail-search-form div input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+}
+
+#cocktail-search-form div button {
+    background-color: var(--dark);
+    margin: 0;
+    width: 50px;
+}
+/* FORM STYLES END */
+
+/* SEARCH HISTORY STYLES START */
+.cocktail-search-history-container {
+    width: 100%;
+    height: auto;
+}
+/* SEARCH HISTORY STYLES END */
+
 .cocktail-name {
     border: 3px solid var(--medium);
     border-radius: 10px;
@@ -35,8 +89,12 @@
 
 .cocktail-search-error {
     text-align: center;
-    margin: 100px 10%;
+    margin: 10px 10%;
     line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #cocktail-search-history {
@@ -44,7 +102,26 @@
     justify-content: space-around;
 }
 
+#random-confirm,
+#surprise-confirm {
+    padding: auto;
+    width: 350px;
+    height: 75px;
+    font-size: 26px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+
+    #image-container,
+    #ingredients-container,
+    #instructions-container {
+        margin: 30px;
+    }
+}
+
 @media screen and (max-width: 950px) {
+
     #instructions-container {
         width: 100%;
         max-width: 520px;
@@ -52,7 +129,37 @@
 }
 
 @media screen and (max-width: 640px) {
+
+    #image-container {
+        min-width: 300px;
+    }
+
+    #image-container,
+    #ingredients-container,
     #instructions-container {
-        width: 25%;
+        margin: 0;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    #image-container,
+    #ingredients-container,
+    #instructions-container {
+        min-height: 0;
+        min-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .cocktail-image {
+        width: 80vw;
+        min-width: 80vw;
+        max-width: 80vw;
+        height: 80vw;
+        min-height: 80vw;
+        max-height: 80vw;
     }
 }
