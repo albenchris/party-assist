@@ -44,7 +44,17 @@
     justify-content: space-around;
 }
 
+@media screen and (max-width: 1000px) {
+
+    #image-container,
+    #ingredients-container,
+    #instructions-container {
+        margin: 30px;
+    }
+}
+
 @media screen and (max-width: 950px) {
+
     #instructions-container {
         width: 100%;
         max-width: 520px;
@@ -52,7 +62,37 @@
 }
 
 @media screen and (max-width: 640px) {
+
+    #image-container {
+        min-width: 300px;
+    }
+
+    #image-container,
+    #ingredients-container,
     #instructions-container {
-        width: 25%;
+        margin: 0;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    #image-container,
+    #ingredients-container,
+    #instructions-container {
+        min-height: 0;
+        min-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .cocktail-image {
+        width: 80vw;
+        min-width: 80vw;
+        max-width: 80vw;
+        height: 80vw;
+        min-height: 80vw;
+        max-height: 80vw;
     }
 }

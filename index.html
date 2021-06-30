@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party Assist</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css" /> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -17,19 +17,13 @@
 
 <body>
     <!-- Header Start -->
-    <header class="pure-menu pure-menu-horizontal">
-        <h1 class="pure-menu-heading">PARTY ASSIST</h1>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item">
-                <button id="music-btn" class="pure-menu-link pure-button">Music</button>
-            </li>
-            <li class="pure-menu-item">
-                <button id="cocktail-btn" class="pure-menu-link pure-button">Cocktails</button>
-            </li>
-            <li class="pure-menu-item">
-                <button id="trivia-btn" class="pure-menu-link pure-button">Trivia</button>
-            </li>
-        </ul>
+    <header>
+        <h1 class="main-title">PARTY ASSIST</h1>
+        <nav>
+            <button id="music-btn" class="menu-button">Music</button>
+            <button id="cocktail-btn" class="menu-button">Cocktails</button>
+            <button id="trivia-btn" class="menu-button">Trivia</button>
+        </nav>
     </header>
     <!-- Header End -->
 
@@ -38,11 +32,11 @@
         <div id="main-content-container" class="main-content-container">
 
             <!-- Placeholder Content Start -->
-            <div id="image-container" class="">
+            <div id="image-container">
                 <h2 class="drink-name">OLD FASHIONED</h2>
                 <img class="cocktail-image" />
             </div>
-            <div id="ingredients-container" class="">
+            <div id="ingredients-container">
                 <h3 class="ingredients">Ingredients</h3>
                 <ul class="ingredients-list">
                     <li>Bourbon or Rye, 2oz</li>
@@ -51,7 +45,7 @@
                     <li>Orange Peel</li>
                 </ul>
             </div>
-            <div id="instructions-container" class="">
+            <div id="instructions-container">
                 <h3 class="instructions">Instructions</h3>
                 <ol class="instructions-list">
                     <li>Pour whiskey, bitters and syrup into stirring glass</li>
@@ -89,7 +83,7 @@
                 </div>          
             </form>        
             <div class="row">
-                <div id="playlist-container" class="">
+                <div id="playlist-container">
                     <div class="song-list">
                         
                     </div>                                            
@@ -124,7 +118,7 @@
                 <button class="playlist-btn pure-button" id="AllOut80s" value="37i9dQZF1DX4UtSsGT1Sbe">All Out
                     80s</button>
             </div>
-            <button id="music-cancel" class="pure-button modal-button cancel">Cancel</button>
+            <button id="music-cancel" class="pure-button modal-button cancel">Close</button>
         </div>
 
         <div id="cocktail-modal" class="modal hide">
