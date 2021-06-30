@@ -201,12 +201,11 @@ function cocktailModalHandler() {
 function cocktailSearchErrorHandler() {
     closeCocktailModal();
     mainContainerEl.innerHTML = 
-        "<h2 class='cocktail-search-error'>Sorry, we couldn't find that one." +
+        "<div class='cocktail-search-error width-100'><h2>Sorry, we couldn't find that one." +
         "</br>Try searching for another cocktail," + 
         "</br>or if you're feeling adventurous," + 
-        "</br>press the " +
-        "<button id='surprise-confirm' class='confirm'>Surprise Me!</button>" +
-        " button.</h2>";
+        "</br>press this button.</h2>" +
+        "<button id='surprise-confirm' class='confirm'>Surprise Me!</button></div>";
 
     var surpriseMeBtn = document.getElementById("surprise-confirm");
     surpriseMeBtn.addEventListener("click", getRandomDrink);

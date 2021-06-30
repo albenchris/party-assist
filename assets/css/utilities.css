@@ -1,11 +1,10 @@
 /* UTILITY STYLES START */
-.hide {
-    display: none;
-}
+.hide {display: none;}
 
 .position-relative {position: relative;}
-
 .position-absolute {position: absolute;}
+
+.width-100 {width: 100%;}
 
 .cancel {
     float: right;
